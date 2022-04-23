@@ -4,8 +4,8 @@ const { src, dest, parallel, series, watch } = require('gulp')
 const del = require('del')
 const browserSync = require('browser-sync')
 
+const sass = require('gulp-sass')(require('sass'))
 const loadPlugins = require('gulp-load-plugins')
-
 const plugins = loadPlugins()
 const bs = browserSync.create()
 
@@ -57,7 +57,7 @@ const clean = () => {
 const style = () => {
   return src('src/assets/styles/*.scss', { base: 'src' })
     // sass转换插件 outputStyle格式完全展开
-    .pipe(plugins.sass({ outputStyle: 'expanded' }))
+    .pipe(sass({ outputStyle: 'expanded' }))
     .pipe(dest('temp'))
     .pipe(bs.reload({ stream: true }))
 }
