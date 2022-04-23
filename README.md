@@ -4,5 +4,3 @@
 npx run gulp build --gulpfile ./node_modules/qkm-pages/lib/index.js --cwd .
 
 npm i x-pages --dev
-
-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

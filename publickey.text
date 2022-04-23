@@ -1,0 +1,5 @@
+生成公钥
+cd ~/.ssh 查询.ssh文件,如果找不到的话就直接创建一个，
+输入 mkdir ~/.ssh,然后设置账号和邮箱，
+输入 git config --global user.name '账号名'  和 git config --global user.email '邮箱'，
+接着输入 ssh-keygen -t rsa -C '邮箱' 生成公钥
